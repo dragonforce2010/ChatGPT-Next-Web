@@ -355,14 +355,14 @@ export function Settings() {
             </Popover>
           </ListItem>
 
-          <ListItem
+          {/* <ListItem
             title={Locale.Settings.Update.Version(currentVersion ?? "unknown")}
             subTitle={
               checkingUpdate
                 ? Locale.Settings.Update.IsChecking
                 : hasNewVersion
-                ? Locale.Settings.Update.FoundUpdate(remoteId ?? "ERROR")
-                : Locale.Settings.Update.IsLatest
+                  ? Locale.Settings.Update.FoundUpdate(remoteId ?? "ERROR")
+                  : Locale.Settings.Update.IsLatest
             }
           >
             {checkingUpdate ? (
@@ -378,7 +378,7 @@ export function Settings() {
                 onClick={() => checkUpdate(true)}
               />
             )}
-          </ListItem>
+          </ListItem> */}
 
           <ListItem title={Locale.Settings.SendKey}>
             <Select
@@ -484,7 +484,7 @@ export function Settings() {
         </List>
 
         <List>
-          {enabledAccessControl ? (
+          {enabledAccessControl || true ? (
             <ListItem
               title={Locale.Settings.AccessCode.Title}
               subTitle={Locale.Settings.AccessCode.SubTitle}
@@ -502,7 +502,7 @@ export function Settings() {
             <></>
           )}
 
-          {!accessStore.hideUserApiKey ? (
+          {/* {!accessStore.hideUserApiKey ? (
             <ListItem
               title={Locale.Settings.Token.Title}
               subTitle={Locale.Settings.Token.SubTitle}
@@ -516,7 +516,7 @@ export function Settings() {
                 }}
               />
             </ListItem>
-          ) : null}
+          ) : null} */}
 
           <ListItem
             title={Locale.Settings.Usage.Title}
