@@ -55,7 +55,8 @@ import chatStyle from "./chat.module.scss";
 import { ListItem, Modal } from "./ui-lib";
 import { useLocation, useNavigate } from "react-router-dom";
 import { LAST_INPUT_KEY, Path, REQUEST_TIMEOUT_MS } from "../constant";
-import { Avatar } from "./emoji";
+// import { Avatar } from "./emoji";
+import { Avatar } from "antd";
 import { MaskAvatar, MaskConfig } from "./mask";
 import { useMaskStore } from "../store/mask";
 import { useCommand } from "../command";
@@ -669,7 +670,7 @@ export function Chat() {
 
   return (
     <div className={styles.chat} key={session.id}>
-      <div className="window-header">
+      {/* <div className="window-header">
         <div className="window-header-title">
           <div
             className={`window-header-main-title " ${styles["chat-body-title"]}`}
@@ -727,7 +728,7 @@ export function Chat() {
           showModal={showPromptModal}
           setShowModal={setShowPromptModal}
         />
-      </div>
+      </div> */}
 
       <div
         className={styles["chat-body"]}
@@ -761,9 +762,10 @@ export function Chat() {
                 <div className={styles["chat-message-container"]}>
                   <div className={styles["chat-message-avatar"]}>
                     {message.role === "user" ? (
-                      <Avatar avatar={config.avatar} />
+                      // <Avatar avatar={config.avatar} />
+                      <Avatar src="https://lf3-static.bytednsdoc.com/obj/eden-cn/nuhogeh7slhojpt/useravatar.png" />
                     ) : (
-                      <MaskAvatar mask={session.mask} />
+                      <Avatar src="https://lf3-static.bytednsdoc.com/obj/eden-cn/nuhogeh7slhojpt/apaas%20logo.png" />
                     )}
                   </div>
                   {showTyping && (
