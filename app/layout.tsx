@@ -7,8 +7,8 @@ import { getBuildConfig } from "./config/build";
 const buildConfig = getBuildConfig();
 
 export const metadata = {
-  title: "Ai Mate",
-  description: "个人智能GPT助手",
+  title: "aPaaS Smart Assistant",
+  description: "aPaaS个人智能GPT助手",
   viewport: {
     width: "device-width",
     initialScale: 1,
