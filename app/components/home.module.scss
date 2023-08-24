@@ -13,8 +13,10 @@
   overflow: hidden;
   box-sizing: border-box;
 
-  width: var(--window-width);
-  height: var(--window-height);
+  // width: var(--window-width);
+  // height: var(--window-height);
+  width: 100vw;
+  height: 100vh
 }
 
 .container {
